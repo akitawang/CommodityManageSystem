@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+  
+  <constant name="struts.objectFactory" value="spring"/>
+  
+  <!--action的404处理 -->  
+  <package name="error" extends="struts-default">  
+  <default-action-ref name="notFound" />  
+  <action name="notFound">  
+       <result>/404.jsp</result>  
+  </action>  
+  </package>
+  
+  <package name="basicstruts" extends="struts-default">
+ <!-- <action name="logAdmin" class="com.nms.action.AdminAction" method="log">
+    <result name="listProduct">WEB-INF/jsp/product/listProduct.jsp</result>
+    <result name="listProductAction" type="redirect">listProduct</result>
+    <result name="editProduct">WEB-INF/jsp/product/editProduct.jsp</result>
+    <result name="logok">nms_back/index.jsp</result>
+  </action> -->
+ </package>
+  
+  
+</struts>
